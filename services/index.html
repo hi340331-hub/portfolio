@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
 <meta charset="utf-8">
+<meta name="google" content="notranslate">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>My Services & What You Get</title>
 <meta name="description" content="Front-end websites with serious animation and real 3D. Unlimited revisions, 24/7 contact, free rush delivery.">
@@ -29,9 +30,7 @@
 
 <main>
   <section class="hero" id="top">
-    <p class="tag reveal">Front-end developer</p>
     <h1 class="split">I build websites<br>people <em>remember.</em></h1>
-    <p class="lead reveal">Animated. 3D. Fast. Pixel-perfect.</p>
     <div class="cta reveal">
       <a href="#pricing" class="btn magnetic">See pricing</a>
       <a href="#get" class="btn ghost magnetic">What you get</a>
@@ -62,11 +61,21 @@
       <div class="perk"><strong>&infin;</strong><span>Unlimited revisions</span></div>
       <div class="perk"><strong>24/7</strong><span>Always in touch</span></div>
       <div class="perk"><strong>100%</strong><span>Unique, every project</span></div>
+      <div class="perk"><strong>&lt;/&gt;</strong><span>Backend-ready code notes, free on request</span></div>
       <div class="perk"><strong data-count="6">0</strong><span>Live projects in my portfolio</span></div>
     </div>
     <div class="callout">
       <h3>Need it faster?</h3>
       <p>I'll speed up at no extra cost. The quality stays exactly the same.</p>
+    </div>
+    <div class="term reveal" aria-label="Example of backend notes in code">
+      <div class="bar"><i></i><i></i><i></i><span>checkout.js</span></div>
+<pre><code><span class="c">// BACKEND: this block handles the contact form submit.</span>
+<span class="c">// Send `payload` to POST /api/orders, expect { ok: true }.</span>
+<span class="k">async function</span> <span class="f">submitOrder</span>(payload) {
+  <span class="c">// TODO(backend): replace the mock with a real request</span>
+  <span class="k">return</span> { ok: <span class="k">true</span> };
+}</code></pre>
     </div>
     <p class="exp reveal">Years of working with real clients, and it shows in every detail.</p>
   </section>
@@ -102,7 +111,7 @@
         <h3>Pro</h3>
         <div class="price">$150</div>
         <ul>
-          <li>Everything in Base</li>
+          <li>All Base features included</li>
           <li>Up to 9 sections</li>
           <li>Advanced GSAP animations</li>
           <li>Smooth scroll and custom cursor</li>
@@ -116,7 +125,7 @@
         <h3>Platinum</h3>
         <div class="price">$250<small>&ndash;</small>$450</div>
         <ul>
-          <li>Everything in Pro</li>
+          <li>All Pro features included</li>
           <li>Unlimited animations</li>
           <li>Full 3D / WebGL scenes</li>
           <li>Custom shaders and effects</li>
@@ -141,7 +150,6 @@
 
   <section class="sec contact" id="contact">
     <h2 class="split">Let's build yours</h2>
-    <p class="lead reveal">Write to me and I'll answer today.</p>
     <div class="cta reveal">
       <a href="#" id="contactLink" class="btn magnetic">Contact me</a>
     </div>
