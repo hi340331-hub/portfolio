@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="o" cx="40%" cy="35%" r="65%"><stop offset="0" stop-color="#fff4e6"/><stop offset=".25" stop-color="#ff8a5b"/><stop offset=".55" stop-color="#ff5ca8"/><stop offset=".8" stop-color="#7c5cff"/><stop offset="1" stop-color="#3dd6f5"/></radialGradient>
+    <filter id="g" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="60"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="#07070b"/>
+  <circle cx="860" cy="315" r="230" fill="#7c5cff" filter="url(#g)" opacity=".5"/>
+  <circle cx="860" cy="315" r="200" fill="url(#o)"/>
+  <text x="80" y="150" fill="#f4f1ec" fill-opacity=".62" font-family="Inter, Helvetica, Arial, sans-serif" font-size="24" letter-spacing="4">LIVE · 10 DEC 2026 · 18:00 CET</text>
+  <text font-family="Helvetica Neue, Arial, sans-serif" font-weight="700" font-size="92" letter-spacing="-3" fill="#f4f1ec"><tspan x="76" y="300">Designing</tspan><tspan x="76" y="395">the next <tspan font-family="Georgia, serif" font-style="italic" font-weight="400" fill="#ff8a5b">decade</tspan></tspan><tspan x="76" y="490">with AI.</tspan></text>
+  <text x="80" y="570" fill="#f4f1ec" font-family="Helvetica Neue, Arial, sans-serif" font-weight="700" font-size="26" letter-spacing="3">LUMEN LIVE</text>
+</svg>

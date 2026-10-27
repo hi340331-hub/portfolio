@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+  <defs>
+    <radialGradient id="bg" cx="62%" cy="28%" r="85%"><stop offset="0" stop-color="#24222c"/><stop offset=".55" stop-color="#0f0e14"/><stop offset="1" stop-color="#07070b"/></radialGradient>
+    <radialGradient id="key" r="50%"><stop offset="0" stop-color="#FF8A5B" stop-opacity=".95"/><stop offset="1" stop-color="#FF8A5B" stop-opacity="0"/></radialGradient>
+    <radialGradient id="kick" r="50%"><stop offset="0" stop-color="#FF5CA8" stop-opacity=".8"/><stop offset="1" stop-color="#FF5CA8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="skin" cx="40%" cy="38%" r="70%"><stop offset="0" stop-color="#3a3036"/><stop offset=".5" stop-color="#1a161c"/><stop offset="1" stop-color="#0c0b10"/></radialGradient>
+    <filter id="haze" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="60"/></filter>
+    <filter id="rim" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="14"/></filter>
+    <filter id="dof" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="13"/></filter>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .55 0"/></filter>
+    <g id="figure" transform="rotate(-10 300 420)">
+      <path d="M300 120c-110 0-170 70-160 160 8 64 50 90 70 96-10-60 10-110 90-120 80 10 100 60 90 120 20-6 62-32 70-96 10-90-50-160-160-160z"/>
+      <ellipse cx="300" cy="300" rx="92" ry="120"/>
+      <path d="M268 400h64l8 92c118 18 190 92 200 308H60c10-216 82-290 200-308z"/>
+    </g>
+  </defs>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  <ellipse cx="140" cy="260" rx="260" ry="330" fill="url(#key)" filter="url(#haze)" opacity=".75"/>
+  <ellipse cx="540" cy="460" rx="170" ry="280" fill="url(#kick)" filter="url(#haze)" opacity=".55"/>
+  <use href="#figure" fill="#FF8A5B" filter="url(#rim)" transform="translate(-9 -4)" opacity=".9"/>
+  <use href="#figure" fill="#FF5CA8" filter="url(#rim)" transform="translate(8 2)" opacity=".55"/>
+  <use href="#figure" fill="url(#skin)" filter="url(#dof)"/>
+  <ellipse cx="270" cy="300" rx="70" ry="95" fill="#f2dccb" opacity=".07" filter="url(#haze)"/>
+  <rect width="600" height="800" filter="url(#grain)" opacity=".1"/>
+</svg>

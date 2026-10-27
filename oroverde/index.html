@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OROVERDE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="en/">
+<script>
+(function () {
+  var L = ['en', 'es', 'de'], l = 'en';
+  try {
+    var m = document.cookie.match(/NEXT_LOCALE=(en|es|de)/);
+    var n = (navigator.language || 'en').slice(0, 2);
+    l = m ? m[1] : L.indexOf(n) > -1 ? n : 'en';
+  } catch (e) {}
+  location.replace(l + '/' + location.search + location.hash);
+})();
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=en/"></noscript>
+</head>
+<body><a href="en/">English</a> · <a href="es/">Español</a> · <a href="de/">Deutsch</a></body>
+</html>
