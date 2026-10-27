@@ -1,4 +1,4 @@
-import{r as i,u as v,j as s,b as f,c as d,p as m,h as o}from"./index-DCxdEgkE.js";import{t as p,u as g,w as u,V as h,q as x}from"./react-three-fiber.esm-mFoiHoAR.js";import{v as w,n as b}from"./noise-DPC3pax2.js";import"./motion-BOzlLFWQ.js";const T=`// Procedural wood rings with a slow band of light passing over them.
+import{r as i,u as v,j as s,b as f,c as d,p as m,h as o}from"./index-5I_4lDSm.js";import{t as p,u as g,w as u,V as h,q as x}from"./react-three-fiber.esm-DEcwc0cP.js";import{v as w,n as b}from"./noise-DPC3pax2.js";import"./motion-BOzlLFWQ.js";const T=`// Procedural wood rings with a slow band of light passing over them.
 uniform float uTime;
 uniform vec2 uRes;
 uniform vec3 uBase;

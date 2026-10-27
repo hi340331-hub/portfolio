@@ -1,4 +1,4 @@
-import{r as i,u as S,j as m,c as F,h as p,s as j}from"./index-DCxdEgkE.js";import{t as P,u as L,v as V,L as $,w as g,V as M,q as _}from"./react-three-fiber.esm-mFoiHoAR.js";import{v as U,n as X}from"./noise-DPC3pax2.js";import"./motion-BOzlLFWQ.js";const Y=`// Manifesto liquid text. The texture stores glyph coverage in alpha and the
+import{r as i,u as S,j as m,c as F,h as p,s as j}from"./index-5I_4lDSm.js";import{t as P,u as L,v as V,L as $,w as g,V as M,q as _}from"./react-three-fiber.esm-DEcwc0cP.js";import{v as U,n as X}from"./noise-DPC3pax2.js";import"./motion-BOzlLFWQ.js";const Y=`// Manifesto liquid text. The texture stores glyph coverage in alpha and the
 // word index in red (premultiplied), so each word can light up on scroll.
 uniform sampler2D uTex;
 uniform float uTime;
