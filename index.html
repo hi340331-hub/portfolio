@@ -61,7 +61,7 @@
       <a href="#work">Work</a>
       <a href="services/">Services</a>
       <a href="skills/">Skills</a>
-      <a class="btn sm" href="services/#contact" data-contact>Hire me</a>
+      <a class="btn sm" href="#contact">Hire me</a>
     </nav>
   </div>
 </header>
@@ -74,7 +74,6 @@
       <div>
         <span class="chip" data-reveal><span class="dot"></span>Available for new projects</span>
         <h1 class="h1 split">Landing pages that feel <em class="grad">alive.</em></h1>
-        <p class="lead" data-reveal style="--d:.35s">I design and build animated, 3D websites for brands that want to stand out. Fast, responsive and made from scratch.</p>
         <div class="actions" data-reveal style="--d:.5s">
           <a class="btn grad-bg" href="#work">View the work <span class="arr">&rarr;</span></a>
           <a class="btn ghost" href="services/">Services &amp; pricing</a>
@@ -92,7 +91,13 @@
     <div class="wrap">
       <div class="sec-head">
         <h2 class="h2 split">Selected <em>work</em></h2>
-        <p class="lead" data-reveal>Six live landing pages, six industries. Open any of them and scroll.</p>
+        <div class="info" data-reveal>
+          <button class="info-btn" type="button" aria-describedby="about-work"><span class="i">i</span>About these projects</button>
+          <div class="tip" role="tooltip" id="about-work">
+            <p>Every site here was built specifically for this portfolio. I wanted to find out how fast, and how well, I could make them.</p>
+            <p>At the company I worked for, I didn't build landing pages: I designed and animated one large website. That work is covered by an NDA (Non-Disclosure Agreement), so I can't show it here.</p>
+          </div>
+        </div>
       </div>
       <div class="works">
         <a class="work" href="webinar/" data-reveal>
@@ -128,14 +133,12 @@
       <a class="card panel feature" href="services/" data-reveal>
         <div>
           <h3>Services &amp; pricing</h3>
-          <p>What you get, how we work, and three clear plans.</p>
         </div>
         <div class="bottom"><span class="big">from <span class="grad">$100</span></span><span class="circle">&rarr;</span></div>
       </a>
       <a class="card panel" href="skills/" data-reveal style="--d:.12s">
         <div>
           <h3>Skills &amp; stack</h3>
-          <p>The tools behind every site above.</p>
         </div>
         <div class="bottom">
           <div class="tags"><span>React</span><span>Three.js</span><span>GSAP</span><span>TypeScript</span></div>
@@ -145,14 +148,22 @@
     </div>
   </section>
 
-  <section class="sec cta-band">
+  <section class="sec contact" id="contact">
     <div class="glow" style="width:70vw;height:40vw;left:15vw;top:10%;background:radial-gradient(circle,#4a2fd0,transparent 65%);opacity:.45"></div>
     <div class="wrap" style="position:relative">
       <h2 class="h2 split">Have a project <em class="grad">in mind?</em></h2>
-      <p class="lead" data-reveal>Tell me about it. You get a clear plan and a fixed price.</p>
-      <div class="actions" data-reveal style="--d:.15s">
-        <a class="btn grad-bg" href="services/#contact" data-contact>Let's talk <span class="arr">&rarr;</span></a>
-        <a class="btn ghost" href="services/#pricing">See pricing</a>
+      <p class="scam" data-reveal><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></svg><span>Beware of scammers. I only reply from <b>@fenixLix</b> on Telegram and my official Fiverr profile.</span></p>
+      <div class="contact-links" data-reveal style="--d:.1s">
+        <a class="card contact-link" href="https://t.me/fenixLix" target="_blank" rel="noopener">
+          <span class="ico tg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 4.5L2.8 11.7c-1 .4-1 1.6.1 1.9l4.7 1.5 1.8 5.6c.3.8 1.3 1 1.9.4l2.6-2.5 4.9 3.6c.7.5 1.7.1 1.9-.8l3.1-14.6c.2-1-.8-1.8-1.7-1.4z"/><path d="M7.6 15.1l10.2-7.4-7.8 8.7"/></svg></span>
+          <span class="txt"><b>Telegram</b><i>@fenixLix</i></span>
+          <span class="circle">&rarr;</span>
+        </a>
+        <a class="card contact-link" data-fiverr aria-disabled="true">
+          <span class="ico fv">fi</span>
+          <span class="txt"><b>Fiverr</b><i data-fiverr-label>Coming soon</i></span>
+          <span class="circle">&rarr;</span>
+        </a>
       </div>
     </div>
   </section>

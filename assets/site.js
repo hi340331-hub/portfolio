@@ -1,20 +1,29 @@
 /* Shared behaviour for the portfolio hub, Services and Skills pages. */
 (function () {
-  // Where every "Hire me" / "Contact me" button points. Set your Telegram, email or other link here,
-  // e.g. 'https://t.me/yourname' or 'mailto:you@example.com'.
-  var CONTACT = '';
+  // Fiverr profile link. Leave empty until the profile is ready: the Fiverr card then shows "Coming soon".
+  var FIVERR = '';
 
   var root = document.documentElement;
   root.classList.remove('no-js');
   root.classList.add('js');
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  if (CONTACT) {
-    document.querySelectorAll('[data-contact]').forEach(function (a) {
-      a.href = CONTACT;
-      if (/^https?:/.test(CONTACT)) { a.target = '_blank'; a.rel = 'noopener'; }
+  if (FIVERR) {
+    document.querySelectorAll('[data-fiverr]').forEach(function (a) {
+      a.href = FIVERR;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.removeAttribute('aria-disabled');
+      var label = a.querySelector('[data-fiverr-label]');
+      if (label) label.textContent = 'Hire me on Fiverr';
     });
   }
+
+  /* Info tooltip: hover/focus on desktop, tap to toggle on touch. */
+  document.querySelectorAll('.info').forEach(function (info) {
+    info.querySelector('.info-btn').addEventListener('click', function () { info.classList.toggle('open'); });
+    document.addEventListener('click', function (e) { if (!info.contains(e.target)) info.classList.remove('open'); });
+  });
 
   /* Split headings into masked words. */
   document.querySelectorAll('.split').forEach(function (el) {
