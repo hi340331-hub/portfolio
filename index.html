@@ -1,38 +1,185 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Portfolio</title>
-<meta name="description" content="Front-end portfolio: animated, 3D landing pages.">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<html lang="en" class="no-js" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google" content="notranslate">
+<title>Portfolio — Animated &amp; 3D Landing Pages</title>
+<meta name="description" content="Front-end developer building animated, 3D landing pages. Six live projects across webinars, logistics, furniture, education, B2B and SaaS.">
+<meta name="theme-color" content="#08080c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Landing pages that feel alive">
+<meta property="og:description" content="Animated, 3D landing pages. Six live projects, services and pricing.">
+<meta property="og:image" content="assets/work/webinar.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233fd5f0'/%3E%3Cstop offset='.5' stop-color='%238b6cff'/%3E%3Cstop offset='1' stop-color='%23ff5fa8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Crect x='18' y='18' width='28' height='28' rx='8' fill='%2308080c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 <style>
-:root{--bg:#07070b;--fg:#f2f1f7;--mut:#9a98ab;--line:rgba(255,255,255,.1)}
-*{box-sizing:border-box;margin:0}
-body{background:var(--bg);color:var(--fg);font:400 18px/1.5 "Space Grotesk",system-ui,sans-serif;padding:clamp(20px,5vw,72px);max-width:1200px;margin:auto;background-image:radial-gradient(600px circle at 15% 0%,rgba(124,92,255,.22),transparent 60%),radial-gradient(500px circle at 90% 10%,rgba(34,211,238,.16),transparent 60%);background-repeat:no-repeat}
-a{color:inherit;text-decoration:none}
-h1{font-size:clamp(40px,7vw,96px);letter-spacing:-.03em;line-height:1;margin:6vh 0 clamp(28px,4vw,56px)}
-.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-bottom:20px}
-.f{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:300px;padding:clamp(26px,3vw,44px);border-radius:28px;border:1px solid transparent;overflow:hidden;transition:transform .3s,box-shadow .3s}
-.f:hover{transform:translateY(-6px)}
-.f.a{background:linear-gradient(#0c0b16,#0c0b16) padding-box,linear-gradient(140deg,#22d3ee,#7c5cff,#ff4fa3) border-box;box-shadow:0 30px 90px -40px #7c5cff}
-.f.b{background:linear-gradient(#08100f,#08100f) padding-box,linear-gradient(140deg,#34d399,#22d3ee,#7c5cff) border-box;box-shadow:0 30px 90px -40px #22d3ee}
-.f span{font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--mut)}
-.f h2{font-size:clamp(30px,4vw,52px);letter-spacing:-.02em;line-height:1.05;margin-top:12px}
-.f i{font-style:normal;font-size:34px;align-self:flex-end;transition:transform .3s}.f:hover i{transform:translate(6px,-6px)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
-.p{padding:26px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.03);display:flex;justify-content:space-between;align-items:center;transition:background .25s,border-color .25s}
-.p:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.3)}
-</style></head>
+  .hero { position: relative; min-height: 100svh; display: flex; align-items: center; padding-block: 140px 100px; overflow: hidden; }
+  .hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); align-items: center; gap: 48px; }
+  .hero .h1 { margin-top: 32px; }
+  .hero .lead { margin-top: 32px; }
+  .hero .actions { margin-top: 44px; }
+
+  .stack { position: relative; height: clamp(360px, 40vw, 560px); perspective: 1600px; }
+  .stack figure {
+    position: absolute;
+    width: 82%;
+    aspect-ratio: 16 / 10;
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--card);
+    box-shadow: 0 0 0 1px rgba(255,255,255,.12), 0 40px 90px -30px rgba(0,0,0,.95);
+    transform-style: preserve-3d;
+    transition: transform 1.2s var(--ease);
+  }
+  .stack img { width: 100%; height: 100%; object-fit: cover; }
+  .stack .s1 { right: 0; top: 0; transform: translate3d(0,0,-120px) rotateY(-18deg) rotateX(6deg); }
+  .stack .s2 { right: 8%; top: 22%; transform: translate3d(0,0,-40px) rotateY(-18deg) rotateX(6deg); }
+  .stack .s3 { right: 16%; top: 44%; transform: translate3d(0,0,40px) rotateY(-18deg) rotateX(6deg); }
+  .js .stack figure { opacity: 0; translate: 0 60px; transition: transform 1.2s var(--ease), opacity 1s var(--ease), translate 1.2s var(--ease); }
+  .js .stack.in figure { opacity: 1; translate: 0 0; }
+  .stack.in .s1 { transition-delay: .25s; } .stack.in .s2 { transition-delay: .4s; } .stack.in .s3 { transition-delay: .55s; }
+
+  @media (max-width: 960px) {
+    .hero { padding-block: 120px 80px; }
+    .hero .wrap { grid-template-columns: 1fr; }
+    .stack { height: min(70vw, 420px); margin-top: 24px; }
+  }
+</style>
+</head>
 <body>
-<h1>Portfolio</h1>
-<div class="feat">
-  <a class="f a" href="services/"><div><span>Start here</span><h2>My Services &amp; What You Get</h2></div><i>&#8599;</i></a>
-  <a class="f b" href="skills/"><div><span>The toolbox</span><h2>My Skills</h2></div><i>&#8599;</i></a>
-</div>
-<div class="grid">
-  <a class="p" href="webinar/">Webinar <i>&#8599;</i></a>
-  <a class="p" href="logistics/">Logistics &amp; freight <i>&#8599;</i></a>
-  <a class="p" href="furniture/">Custom furniture <i>&#8599;</i></a>
-  <a class="p" href="school/">Online school <i>&#8599;</i></a>
-  <a class="p" href="oroverde/">B2B wholesale <i>&#8599;</i></a>
-  <a class="p" href="saas/">SaaS <i>&#8599;</i></a>
-</div>
-</body></html>
+<div class="progress"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="./"><i></i>Portfolio</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="services/">Services</a>
+      <a href="skills/">Skills</a>
+      <a class="btn sm" href="services/#contact" data-contact>Hire me</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="glow" style="width:60vw;height:60vw;left:-15vw;top:-25vw;background:radial-gradient(circle,#5b3fe0,transparent 65%)"></div>
+    <div class="glow" style="width:50vw;height:50vw;right:-15vw;bottom:-20vw;background:radial-gradient(circle,#0f6f86,transparent 65%);opacity:.4"></div>
+    <div class="wrap">
+      <div>
+        <span class="chip" data-reveal><span class="dot"></span>Available for new projects</span>
+        <h1 class="h1 split">Landing pages that feel <em class="grad">alive.</em></h1>
+        <p class="lead" data-reveal style="--d:.35s">I design and build animated, 3D websites for brands that want to stand out. Fast, responsive and made from scratch.</p>
+        <div class="actions" data-reveal style="--d:.5s">
+          <a class="btn grad-bg" href="#work">View the work <span class="arr">&rarr;</span></a>
+          <a class="btn ghost" href="services/">Services &amp; pricing</a>
+        </div>
+      </div>
+      <div class="stack" data-reveal aria-hidden="true">
+        <figure class="s1"><img src="assets/work/saas.jpg" alt="" width="1200" height="750"></figure>
+        <figure class="s2"><img src="assets/work/oroverde.jpg" alt="" width="1200" height="750"></figure>
+        <figure class="s3"><img src="assets/work/webinar.jpg" alt="" width="1200" height="750"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2 split">Selected <em>work</em></h2>
+        <p class="lead" data-reveal>Six live landing pages, six industries. Open any of them and scroll.</p>
+      </div>
+      <div class="works">
+        <a class="work" href="webinar/" data-reveal>
+          <div class="shot"><img src="assets/work/webinar.jpg" alt="LUMEN LIVE webinar landing page" loading="lazy" width="1200" height="750"><span class="go">&rarr;</span></div>
+          <div class="meta"><h3>LUMEN LIVE</h3><span>Webinar</span></div>
+        </a>
+        <a class="work" href="logistics/" data-reveal style="--d:.12s">
+          <div class="shot"><img src="assets/work/logistics.jpg" alt="MERIDIAN logistics landing page" loading="lazy" width="1200" height="750"><span class="go">&rarr;</span></div>
+          <div class="meta"><h3>MERIDIAN</h3><span>Logistics &amp; freight</span></div>
+        </a>
+        <a class="work" href="furniture/" data-reveal>
+          <div class="shot"><img src="assets/work/furniture.jpg" alt="HALDEN custom furniture landing page" loading="lazy" width="1200" height="750"><span class="go">&rarr;</span></div>
+          <div class="meta"><h3>HALDEN</h3><span>Custom furniture</span></div>
+        </a>
+        <a class="work" href="school/" data-reveal style="--d:.12s">
+          <div class="shot"><img src="assets/work/school.jpg" alt="VERBA online language school landing page" loading="lazy" width="1200" height="750"><span class="go">&rarr;</span></div>
+          <div class="meta"><h3>VERBA</h3><span>Online school</span></div>
+        </a>
+        <a class="work" href="oroverde/" data-reveal>
+          <div class="shot"><img src="assets/work/oroverde.jpg" alt="OROVERDE B2B coffee wholesale landing page" loading="lazy" width="1200" height="750"><span class="go">&rarr;</span></div>
+          <div class="meta"><h3>OROVERDE</h3><span>B2B wholesale</span></div>
+        </a>
+        <a class="work" href="saas/" data-reveal style="--d:.12s">
+          <div class="shot"><img src="assets/work/saas.jpg" alt="Refract SaaS landing page" loading="lazy" width="1200" height="750"><span class="go">&rarr;</span></div>
+          <div class="meta"><h3>Refract</h3><span>SaaS</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0">
+    <div class="wrap panels">
+      <a class="card panel feature" href="services/" data-reveal>
+        <div>
+          <h3>Services &amp; pricing</h3>
+          <p>What you get, how we work, and three clear plans.</p>
+        </div>
+        <div class="bottom"><span class="big">from <span class="grad">$100</span></span><span class="circle">&rarr;</span></div>
+      </a>
+      <a class="card panel" href="skills/" data-reveal style="--d:.12s">
+        <div>
+          <h3>Skills &amp; stack</h3>
+          <p>The tools behind every site above.</p>
+        </div>
+        <div class="bottom">
+          <div class="tags"><span>React</span><span>Three.js</span><span>GSAP</span><span>TypeScript</span></div>
+          <span class="circle">&rarr;</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="sec cta-band">
+    <div class="glow" style="width:70vw;height:40vw;left:15vw;top:10%;background:radial-gradient(circle,#4a2fd0,transparent 65%);opacity:.45"></div>
+    <div class="wrap" style="position:relative">
+      <h2 class="h2 split">Have a project <em class="grad">in mind?</em></h2>
+      <p class="lead" data-reveal>Tell me about it. You get a clear plan and a fixed price.</p>
+      <div class="actions" data-reveal style="--d:.15s">
+        <a class="btn grad-bg" href="services/#contact" data-contact>Let's talk <span class="arr">&rarr;</span></a>
+        <a class="btn ghost" href="services/#pricing">See pricing</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>&copy; <span id="y">2026</span> Portfolio</span>
+    <nav aria-label="Footer"><a href="#work">Work</a><a href="services/">Services</a><a href="skills/">Skills</a></nav>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  (function () {
+    var s = document.querySelector('.stack');
+    if (!s || matchMedia('(prefers-reduced-motion: reduce)').matches || !matchMedia('(pointer: fine)').matches) return;
+    var figs = s.querySelectorAll('figure');
+    addEventListener('pointermove', function (e) {
+      var x = e.clientX / innerWidth - .5, y = e.clientY / innerHeight - .5;
+      figs.forEach(function (f, i) {
+        var k = (i + 1) * 10;
+        f.style.translate = (x * k) + 'px ' + (y * k) + 'px';
+      });
+    });
+  })();
+</script>
+</body>
+</html>

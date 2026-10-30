@@ -1,118 +1,171 @@
 <!doctype html>
-<html lang="en" translate="no">
+<html lang="en" class="no-js" translate="no">
 <head>
 <meta charset="utf-8">
 <meta name="google" content="notranslate">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>My Skills</title>
-<meta name="description" content="The tools and techniques behind every site: React, TypeScript, Three.js, GSAP, shaders and more.">
-<meta name="theme-color" content="#06080d">
+<title>Skills &amp; Stack — Front-end, Motion, 3D</title>
+<meta name="description" content="The tools behind every site: React, TypeScript, Three.js, GSAP, shaders and more.">
+<meta name="theme-color" content="#08080c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233fd5f0'/%3E%3Cstop offset='.5' stop-color='%238b6cff'/%3E%3Cstop offset='1' stop-color='%23ff5fa8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Crect x='18' y='18' width='28' height='28' rx='8' fill='%2308080c'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="loader" id="loader"><span>Loading</span><i></i></div>
-<canvas id="bg" aria-hidden="true"></canvas>
-<div class="progress" id="progress"></div>
+<div class="progress"></div>
+<div class="grain" aria-hidden="true"></div>
 
 <header class="nav">
-  <a href="../" class="back">&larr; Portfolio</a>
-  <nav><a href="#stack">Stack</a><a href="#work">Proof</a><a href="../services/" class="pill">Services</a></nav>
+  <div class="wrap">
+    <a class="brand" href="../"><i></i>Portfolio</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#stack">Stack</a>
+      <a href="#proof">Proof</a>
+      <a href="../services/">Services</a>
+      <a class="btn sm" href="../services/#contact" data-contact>Hire me</a>
+    </nav>
+  </div>
 </header>
 
 <main>
   <section class="hero">
-    <h1 class="split">My <em>skills</em></h1>
-    <div class="chips reveal">
-      <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Three.js</span><span>GSAP</span>
+    <canvas id="scene" aria-hidden="true"></canvas>
+    <div class="glow" style="width:55vw;height:55vw;left:-18vw;top:-22vw;background:radial-gradient(circle,#0f6f86,transparent 65%)"></div>
+    <div class="wrap">
+      <div class="hero-copy">
+        <h1 class="h1 split">The craft behind <em class="grad">every pixel.</em></h1>
+        <p class="lead" data-reveal style="--d:.35s">Modern front-end, motion and real-time 3D. One toolbox, used on every project.</p>
+        <div class="chips" data-reveal style="--d:.5s">
+          <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Three.js</span><span>GSAP</span>
+        </div>
+      </div>
     </div>
-    <div class="scroll-hint"><i></i></div>
   </section>
 
   <section class="sec" id="stack">
-    <h2 class="split">The stack</h2>
-    <div class="skills">
-      <article class="skill tilt">
-        <h3>Core</h3>
-        <ul>
-          <li><span>HTML5 &amp; semantics</span><i style="--l:.95"></i></li>
-          <li><span>CSS3 &amp; layout</span><i style="--l:.95"></i></li>
-          <li><span>JavaScript</span><i style="--l:.9"></i></li>
-          <li><span>TypeScript</span><i style="--l:.85"></i></li>
-        </ul>
-      </article>
-      <article class="skill tilt">
-        <h3>Frameworks</h3>
-        <ul>
-          <li><span>React</span><i style="--l:.9"></i></li>
-          <li><span>Next.js</span><i style="--l:.8"></i></li>
-          <li><span>Vite</span><i style="--l:.85"></i></li>
-          <li><span>Tailwind CSS</span><i style="--l:.85"></i></li>
-        </ul>
-      </article>
-      <article class="skill tilt">
-        <h3>Motion</h3>
-        <ul>
-          <li><span>GSAP &amp; ScrollTrigger</span><i style="--l:.92"></i></li>
-          <li><span>Framer Motion</span><i style="--l:.85"></i></li>
-          <li><span>Lenis smooth scroll</span><i style="--l:.85"></i></li>
-          <li><span>CSS animations</span><i style="--l:.95"></i></li>
-        </ul>
-      </article>
-      <article class="skill tilt">
-        <h3>3D &amp; WebGL</h3>
-        <ul>
-          <li><span>Three.js</span><i style="--l:.88"></i></li>
-          <li><span>React Three Fiber</span><i style="--l:.85"></i></li>
-          <li><span>GLSL shaders</span><i style="--l:.78"></i></li>
-          <li><span>Post-processing</span><i style="--l:.75"></i></li>
-        </ul>
-      </article>
-      <article class="skill tilt">
-        <h3>Quality</h3>
-        <ul>
-          <li><span>Responsive design</span><i style="--l:.95"></i></li>
-          <li><span>Performance</span><i style="--l:.88"></i></li>
-          <li><span>Accessibility</span><i style="--l:.82"></i></li>
-          <li><span>SEO &amp; i18n</span><i style="--l:.85"></i></li>
-        </ul>
-      </article>
-      <article class="skill tilt">
-        <h3>Workflow</h3>
-        <ul>
-          <li><span>Git &amp; GitHub</span><i style="--l:.88"></i></li>
-          <li><span>GitHub Pages deploy</span><i style="--l:.9"></i></li>
-          <li><span>Clean, readable code</span><i style="--l:.92"></i></li>
-          <li><span>Client communication</span><i style="--l:.98"></i></li>
-        </ul>
-      </article>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2 split">The <em>stack</em></h2>
+        <p class="lead" data-reveal>Six areas, each one used in the live projects below.</p>
+      </div>
+      <div class="skills">
+        <article class="card skill" data-reveal>
+          <h3>Core</h3>
+          <ul>
+            <li><span>HTML5 &amp; semantics</span><i style="--l:.95"></i></li>
+            <li><span>CSS3 &amp; layout</span><i style="--l:.95"></i></li>
+            <li><span>JavaScript</span><i style="--l:.9"></i></li>
+            <li><span>TypeScript</span><i style="--l:.85"></i></li>
+          </ul>
+        </article>
+        <article class="card skill" data-reveal style="--d:.08s">
+          <h3>Frameworks</h3>
+          <ul>
+            <li><span>React</span><i style="--l:.9"></i></li>
+            <li><span>Next.js</span><i style="--l:.8"></i></li>
+            <li><span>Vite</span><i style="--l:.85"></i></li>
+            <li><span>Tailwind CSS</span><i style="--l:.85"></i></li>
+          </ul>
+        </article>
+        <article class="card skill" data-reveal style="--d:.16s">
+          <h3>Motion</h3>
+          <ul>
+            <li><span>GSAP &amp; ScrollTrigger</span><i style="--l:.92"></i></li>
+            <li><span>Framer Motion</span><i style="--l:.85"></i></li>
+            <li><span>Lenis smooth scroll</span><i style="--l:.85"></i></li>
+            <li><span>CSS animations</span><i style="--l:.95"></i></li>
+          </ul>
+        </article>
+        <article class="card skill" data-reveal>
+          <h3>3D &amp; WebGL</h3>
+          <ul>
+            <li><span>Three.js</span><i style="--l:.88"></i></li>
+            <li><span>React Three Fiber</span><i style="--l:.85"></i></li>
+            <li><span>GLSL shaders</span><i style="--l:.78"></i></li>
+            <li><span>Post-processing</span><i style="--l:.75"></i></li>
+          </ul>
+        </article>
+        <article class="card skill" data-reveal style="--d:.08s">
+          <h3>Quality</h3>
+          <ul>
+            <li><span>Responsive design</span><i style="--l:.95"></i></li>
+            <li><span>Performance</span><i style="--l:.88"></i></li>
+            <li><span>Accessibility</span><i style="--l:.82"></i></li>
+            <li><span>SEO &amp; i18n</span><i style="--l:.85"></i></li>
+          </ul>
+        </article>
+        <article class="card skill" data-reveal style="--d:.16s">
+          <h3>Workflow</h3>
+          <ul>
+            <li><span>Git &amp; GitHub</span><i style="--l:.88"></i></li>
+            <li><span>GitHub Pages deploy</span><i style="--l:.9"></i></li>
+            <li><span>Clean, readable code</span><i style="--l:.92"></i></li>
+            <li><span>Client communication</span><i style="--l:.98"></i></li>
+          </ul>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section class="sec" id="work">
-    <h2 class="split">Proof, live</h2>
-    <div class="works">
-      <a class="work tilt" href="../webinar/"><b>01</b><h3>Webinar</h3></a>
-      <a class="work tilt" href="../logistics/"><b>02</b><h3>Logistics</h3></a>
-      <a class="work tilt" href="../furniture/"><b>03</b><h3>Custom furniture</h3></a>
-      <a class="work tilt" href="../school/"><b>04</b><h3>Online school</h3></a>
-      <a class="work tilt" href="../oroverde/"><b>05</b><h3>B2B wholesale</h3></a>
-      <a class="work tilt" href="../saas/"><b>06</b><h3>SaaS</h3></a>
+  <section class="sec" id="proof">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2 split">Proof, <em>live</em></h2>
+        <p class="lead" data-reveal>Every skill above, working in a real landing page.</p>
+      </div>
+      <div class="works three">
+        <a class="work" href="../webinar/" data-reveal>
+          <div class="shot"><img src="../assets/work/webinar.jpg" alt="LUMEN LIVE webinar landing page" loading="lazy" width="1200" height="750"><span class="go">&rarr;</span></div>
+          <div class="meta"><h3>LUMEN LIVE</h3><span>Webinar</span></div>
+        </a>
+        <a class="work" href="../logistics/" data-reveal style="--d:.08s">
+          <div class="shot"><img src="../assets/work/logistics.jpg" alt="MERIDIAN logistics landing page" loading="lazy" width="1200" height="750"><span class="go">&rarr;</span></div>
+          <div class="meta"><h3>MERIDIAN</h3><span>Logistics</span></div>
+        </a>
+        <a class="work" href="../furniture/" data-reveal style="--d:.16s">
+          <div class="shot"><img src="../assets/work/furniture.jpg" alt="HALDEN furniture landing page" loading="lazy" width="1200" height="750"><span class="go">&rarr;</span></div>
+          <div class="meta"><h3>HALDEN</h3><span>Furniture</span></div>
+        </a>
+        <a class="work" href="../school/" data-reveal>
+          <div class="shot"><img src="../assets/work/school.jpg" alt="VERBA online school landing page" loading="lazy" width="1200" height="750"><span class="go">&rarr;</span></div>
+          <div class="meta"><h3>VERBA</h3><span>Online school</span></div>
+        </a>
+        <a class="work" href="../oroverde/" data-reveal style="--d:.08s">
+          <div class="shot"><img src="../assets/work/oroverde.jpg" alt="OROVERDE B2B landing page" loading="lazy" width="1200" height="750"><span class="go">&rarr;</span></div>
+          <div class="meta"><h3>OROVERDE</h3><span>B2B wholesale</span></div>
+        </a>
+        <a class="work" href="../saas/" data-reveal style="--d:.16s">
+          <div class="shot"><img src="../assets/work/saas.jpg" alt="Refract SaaS landing page" loading="lazy" width="1200" height="750"><span class="go">&rarr;</span></div>
+          <div class="meta"><h3>Refract</h3><span>SaaS</span></div>
+        </a>
+      </div>
     </div>
   </section>
 
-  <section class="sec contact">
-    <h2 class="split">Want this on <em>your</em> site?</h2>
-    <div class="cta reveal"><a href="../services/" class="btn magnetic">See services &amp; pricing</a></div>
+  <section class="sec cta-band">
+    <div class="glow" style="width:70vw;height:40vw;left:15vw;top:10%;background:radial-gradient(circle,#0f6f86,transparent 65%);opacity:.5"></div>
+    <div class="wrap" style="position:relative">
+      <h2 class="h2 split">Want this on <em class="grad">your</em> site?</h2>
+      <div class="actions" data-reveal style="--d:.15s">
+        <a class="btn grad-bg" href="../services/">Services &amp; pricing <span class="arr">&rarr;</span></a>
+        <a class="btn ghost" href="../services/#contact" data-contact>Hire me</a>
+      </div>
+    </div>
   </section>
 </main>
-<footer class="foot"><a href="../">&larr; Back to portfolio</a></footer>
+
+<footer class="foot">
+  <div class="wrap">
+    <a href="../">&larr; Back to portfolio</a>
+    <nav aria-label="Footer"><a href="../#work">Work</a><a href="../services/">Services</a></nav>
+  </div>
+</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../assets/site.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

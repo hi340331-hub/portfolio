@@ -1,166 +1,227 @@
 <!doctype html>
-<html lang="en" translate="no">
+<html lang="en" class="no-js" translate="no">
 <head>
 <meta charset="utf-8">
 <meta name="google" content="notranslate">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>My Services & What You Get</title>
-<meta name="description" content="Front-end websites with serious animation and real 3D. Unlimited revisions, 24/7 contact, free rush delivery.">
-<meta name="theme-color" content="#07070b">
+<title>Services &amp; Pricing — Animated 3D Landing Pages</title>
+<meta name="description" content="Custom animated and 3D landing pages from $100. Unlimited revisions, 24/7 contact, free rush delivery and backend-ready code.">
+<meta name="theme-color" content="#08080c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233fd5f0'/%3E%3Cstop offset='.5' stop-color='%238b6cff'/%3E%3Cstop offset='1' stop-color='%23ff5fa8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Crect x='18' y='18' width='28' height='28' rx='8' fill='%2308080c'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="loader" id="loader"><span>Loading experience</span><i></i></div>
-<canvas id="bg" aria-hidden="true"></canvas>
-<div class="progress" id="progress"></div>
-<div class="cursor" id="cursor"></div>
+<div class="progress"></div>
+<div class="grain" aria-hidden="true"></div>
 
 <header class="nav">
-  <a href="../" class="back">&larr; Portfolio</a>
-  <nav>
-    <a href="#get">What you get</a>
-    <a href="#why">Why me</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#contact" class="pill">Hire me</a>
-  </nav>
+  <div class="wrap">
+    <a class="brand" href="../"><i></i>Portfolio</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#get">What you get</a>
+      <a href="#why">Why me</a>
+      <a href="#pricing">Pricing</a>
+      <a class="btn sm" href="#contact" data-contact>Hire me</a>
+    </nav>
+  </div>
 </header>
 
 <main>
-  <section class="hero" id="top">
-    <h1 class="split">I build websites<br>people <em>remember.</em></h1>
-    <div class="cta reveal">
-      <a href="#pricing" class="btn magnetic">See pricing</a>
-      <a href="#get" class="btn ghost magnetic">What you get</a>
+  <section class="hero">
+    <canvas id="scene" aria-hidden="true"></canvas>
+    <div class="glow" style="width:55vw;height:55vw;left:-18vw;top:-22vw;background:radial-gradient(circle,#5b3fe0,transparent 65%)"></div>
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="chip" data-reveal><span class="dot"></span>Taking new projects</span>
+        <h1 class="h1 split">I build websites people <em class="grad">remember.</em></h1>
+        <p class="lead" data-reveal style="--d:.35s">Custom design, real motion and 3D. One person from the first sketch to launch day.</p>
+        <div class="actions" data-reveal style="--d:.5s">
+          <a class="btn grad-bg" href="#pricing">See pricing <span class="arr">&rarr;</span></a>
+          <a class="btn ghost" href="../#work">View the work</a>
+        </div>
+      </div>
     </div>
-    <div class="scroll-hint"><i></i></div>
   </section>
 
-  <div class="marquee" aria-hidden="true"><div class="track">
+  <div class="ticker" aria-hidden="true"><div class="track">
     <span>React</span><span>Three.js</span><span>GSAP</span><span>WebGL</span><span>TypeScript</span><span>Shaders</span><span>Next.js</span><span>Framer Motion</span>
     <span>React</span><span>Three.js</span><span>GSAP</span><span>WebGL</span><span>TypeScript</span><span>Shaders</span><span>Next.js</span><span>Framer Motion</span>
   </div></div>
 
   <section class="sec" id="get">
-    <h2 class="split">What you get</h2>
-    <div class="grid">
-      <article class="card tilt"><b>01</b><h3>Custom design</h3><p>Nothing from a template. Your brand, your story.</p></article>
-      <article class="card tilt"><b>02</b><h3>Motion everywhere</h3><p>Scroll reveals, parallax, magnetic buttons, text effects.</p></article>
-      <article class="card tilt"><b>03</b><h3>Real 3D</h3><p>WebGL scenes and shaders that react to scroll and mouse.</p></article>
-      <article class="card tilt"><b>04</b><h3>Every screen</h3><p>Phone, tablet, desktop. Smooth everywhere.</p></article>
-      <article class="card tilt"><b>05</b><h3>Fast and findable</h3><p>Optimized assets, clean code, SEO-ready markup.</p></article>
-      <article class="card tilt"><b>06</b><h3>Clean HTML/CSS/JS</h3><p>Front-end only. Ready to host anywhere.</p></article>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2 split">What you <em>get</em></h2>
+        <p class="lead" data-reveal>Everything a landing page needs to look premium and work hard.</p>
+      </div>
+      <div class="features">
+        <article class="card feat" data-reveal>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6L20 11l-5.4 2.4L12 19l-2.6-5.6L4 11l5.4-2.4z"/></svg>
+          <h3 class="h3">Custom design</h3>
+          <p>Nothing from a template. Your brand, your story.</p>
+        </article>
+        <article class="card feat" data-reveal style="--d:.08s">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12c3-6 6-6 9 0s6 6 9 0"/></svg>
+          <h3 class="h3">Motion everywhere</h3>
+          <p>Scroll reveals, parallax, magnetic buttons, text effects.</p>
+        </article>
+        <article class="card feat" data-reveal style="--d:.16s">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg>
+          <h3 class="h3">Real 3D</h3>
+          <p>WebGL scenes and shaders that react to scroll and mouse.</p>
+        </article>
+        <article class="card feat" data-reveal>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="13" height="10" rx="2"/><rect x="15" y="9" width="6" height="11" rx="1.5"/><path d="M7 18h5"/></svg>
+          <h3 class="h3">Every screen</h3>
+          <p>Phone, tablet and desktop, smooth on all of them.</p>
+        </article>
+        <article class="card feat" data-reveal style="--d:.08s">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>
+          <h3 class="h3">Fast and findable</h3>
+          <p>Optimized assets, clean code, SEO-ready markup.</p>
+        </article>
+        <article class="card feat" data-reveal style="--d:.16s">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
+          <h3 class="h3">Clean HTML, CSS, JS</h3>
+          <p>Front-end only, ready to host anywhere.</p>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section class="sec stats" id="why">
-    <h2 class="split">Why work with me</h2>
-    <div class="perks">
-      <div class="perk"><strong>&infin;</strong><span>Unlimited revisions</span></div>
-      <div class="perk"><strong>24/7</strong><span>Always in touch</span></div>
-      <div class="perk"><strong>100%</strong><span>Unique, every project</span></div>
-      <div class="perk"><strong>&lt;/&gt;</strong><span>Backend-ready code notes, free on request</span></div>
-      <div class="perk"><strong data-count="6">0</strong><span>Live projects in my portfolio</span></div>
-    </div>
-    <div class="callout">
-      <h3>Need it faster?</h3>
-      <p>I'll speed up at no extra cost. The quality stays exactly the same.</p>
-    </div>
-    <div class="term reveal" aria-label="Example of backend notes in code">
-      <div class="bar"><i></i><i></i><i></i><span>checkout.js</span></div>
+  <section class="sec" id="why">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2 split">Why work <em>with me</em></h2>
+        <p class="lead" data-reveal>Years of real client work, and it shows in every detail.</p>
+      </div>
+      <div class="perks">
+        <div class="card perk" data-reveal><strong class="grad">&infin;</strong><span>Unlimited revisions</span></div>
+        <div class="card perk" data-reveal style="--d:.08s"><strong class="grad">24/7</strong><span>Always in touch</span></div>
+        <div class="card perk" data-reveal style="--d:.16s"><strong class="grad">100%</strong><span>Unique, every project</span></div>
+        <div class="card perk" data-reveal style="--d:.24s"><strong class="grad" data-count="6">6</strong><span>Live projects in my portfolio</span></div>
+      </div>
+      <div class="duo">
+        <div class="card rush" data-reveal>
+          <h3>Need it faster?</h3>
+          <p>I speed up at no extra cost. The quality stays exactly the same.</p>
+        </div>
+        <div class="card term" data-reveal style="--d:.1s" aria-label="Example of backend notes in code">
+          <div class="bar"><i></i><i></i><i></i><span>checkout.js</span></div>
 <pre><code><span class="c">// BACKEND: this block handles the contact form submit.</span>
 <span class="c">// Send `payload` to POST /api/orders, expect { ok: true }.</span>
 <span class="k">async function</span> <span class="f">submitOrder</span>(payload) {
   <span class="c">// TODO(backend): replace the mock with a real request</span>
   <span class="k">return</span> { ok: <span class="k">true</span> };
 }</code></pre>
+          <p class="term-cap">Backend-ready code notes, free on request.</p>
+        </div>
+      </div>
     </div>
-    <p class="exp reveal">Years of working with real clients, and it shows in every detail.</p>
   </section>
 
   <section class="sec" id="process">
-    <h2 class="split">How it works</h2>
-    <ol class="steps">
-      <li class="reveal"><b>1</b><h3>Brief</h3></li>
-      <li class="reveal"><b>2</b><h3>Design</h3></li>
-      <li class="reveal"><b>3</b><h3>Build</h3></li>
-      <li class="reveal"><b>4</b><h3>Launch</h3></li>
-    </ol>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2 split">How it <em>works</em></h2>
+      </div>
+      <ol class="steps">
+        <li data-reveal><b>01</b><h3>Brief</h3><p>You tell me the goal. I come back with a plan and a price.</p></li>
+        <li data-reveal style="--d:.08s"><b>02</b><h3>Design</h3><p>Layout, type and motion, shaped around your brand.</p></li>
+        <li data-reveal style="--d:.16s"><b>03</b><h3>Build</h3><p>Clean code, animation and 3D, tested on every screen.</p></li>
+        <li data-reveal style="--d:.24s"><b>04</b><h3>Launch</h3><p>Your site goes live, and revisions stay unlimited.</p></li>
+      </ol>
+    </div>
   </section>
 
   <section class="sec" id="pricing">
-    <h2 class="split">Pricing</h2>
-    <div class="plans">
-      <article class="plan tilt">
-        <h3>Base</h3>
-        <div class="price">$100</div>
-        <ul>
-          <li>Beautiful one-page landing</li>
-          <li>Up to 5 sections</li>
-          <li>Scroll and hover animations</li>
-          <li>Fully responsive</li>
-          <li>Basic SEO</li>
-          <li>Unlimited revisions</li>
-        </ul>
-        <a href="#contact" class="btn ghost">Choose Base</a>
-      </article>
-      <article class="plan tilt hot">
-        <span class="badge">Most popular</span>
-        <h3>Pro</h3>
-        <div class="price">$150</div>
-        <ul>
-          <li>All Base features included</li>
-          <li>Up to 9 sections</li>
-          <li>Advanced GSAP animations</li>
-          <li>Smooth scroll and custom cursor</li>
-          <li>Text and image reveal effects</li>
-          <li>Two languages</li>
-          <li>Speed optimization</li>
-        </ul>
-        <a href="#contact" class="btn">Choose Pro</a>
-      </article>
-      <article class="plan tilt plat">
-        <h3>Platinum</h3>
-        <div class="price">$250<small>&ndash;</small>$450</div>
-        <ul>
-          <li>All Pro features included</li>
-          <li>Unlimited animations</li>
-          <li>Full 3D / WebGL scenes</li>
-          <li>Custom shaders and effects</li>
-          <li>Interactive configurators</li>
-          <li>Preloader, page transitions</li>
-          <li>Unlimited sections and languages</li>
-          <li>Hosting setup included</li>
-          <li>30 days of free support</li>
-        </ul>
-        <a href="#contact" class="btn ghost">Choose Platinum</a>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2 split">Simple <em>pricing</em></h2>
+        <p class="lead" data-reveal>One fixed price. No hidden extras.</p>
+      </div>
+      <div class="plans">
+        <article class="card plan" data-reveal>
+          <h3>Base</h3>
+          <div class="price">$100</div>
+          <ul>
+            <li>Beautiful one-page landing</li>
+            <li>Up to 5 sections</li>
+            <li>Scroll and hover animations</li>
+            <li>Fully responsive</li>
+            <li>Basic SEO</li>
+            <li>Unlimited revisions</li>
+          </ul>
+          <a href="#contact" class="btn ghost" data-contact>Choose Base</a>
+        </article>
+        <article class="card plan hot" data-reveal style="--d:.1s">
+          <span class="badge">Most popular</span>
+          <h3>Pro</h3>
+          <div class="price">$150</div>
+          <ul>
+            <li>Everything in Base</li>
+            <li>Up to 9 sections</li>
+            <li>Advanced GSAP animations</li>
+            <li>Smooth scroll and custom cursor</li>
+            <li>Text and image reveal effects</li>
+            <li>Two languages</li>
+            <li>Speed optimization</li>
+          </ul>
+          <a href="#contact" class="btn grad-bg" data-contact>Choose Pro</a>
+        </article>
+        <article class="card plan plat" data-reveal style="--d:.2s">
+          <h3>Platinum</h3>
+          <div class="price">$250<span>&ndash;</span>450</div>
+          <ul>
+            <li>Everything in Pro</li>
+            <li>Unlimited animations</li>
+            <li>Full 3D and WebGL scenes</li>
+            <li>Custom shaders and effects</li>
+            <li>Interactive configurators</li>
+            <li>Preloader, page transitions</li>
+            <li>Unlimited sections and languages</li>
+            <li>Hosting setup included</li>
+            <li>30 days of free support</li>
+          </ul>
+          <a href="#contact" class="btn ghost" data-contact>Choose Platinum</a>
+        </article>
+      </div>
+      <article class="card se" data-reveal>
+        <div>
+          <h3>Something else?</h3>
+          <p>I'm open to ideas, like connecting a Telegram bot to your site. Tell me what you have in mind.</p>
+        </div>
+        <a href="#contact" class="btn" data-contact>Let's talk <span class="arr">&rarr;</span></a>
       </article>
     </div>
-
-    <article class="plan se tilt">
-      <div>
-        <h3>SE</h3>
-        <p>Need something else? I'm always open to ideas. For example, connecting a Telegram bot to your site. Tell me what you have in mind.</p>
-      </div>
-      <a href="#contact" class="btn">Let's talk</a>
-    </article>
   </section>
 
-  <section class="sec contact" id="contact">
-    <h2 class="split">Let's build yours</h2>
-    <div class="cta reveal">
-      <a href="#" id="contactLink" class="btn magnetic">Contact me</a>
+  <section class="sec cta-band" id="contact">
+    <div class="glow" style="width:70vw;height:40vw;left:15vw;top:10%;background:radial-gradient(circle,#4a2fd0,transparent 65%);opacity:.45"></div>
+    <div class="wrap" style="position:relative">
+      <h2 class="h2 split">Let's build <em class="grad">yours.</em></h2>
+      <p class="lead" data-reveal>Send a message with your idea. I reply fast, day or night.</p>
+      <div class="actions" data-reveal style="--d:.15s">
+        <a class="btn grad-bg" href="#contact" data-contact>Contact me <span class="arr">&rarr;</span></a>
+        <a class="btn ghost" href="../#work">View the work</a>
+      </div>
     </div>
   </section>
 </main>
 
-<footer class="foot"><a href="../">&larr; Back to portfolio</a></footer>
+<footer class="foot">
+  <div class="wrap">
+    <a href="../">&larr; Back to portfolio</a>
+    <nav aria-label="Footer"><a href="../#work">Work</a><a href="../skills/">Skills</a></nav>
+  </div>
+</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../assets/site.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
